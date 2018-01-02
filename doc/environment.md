@@ -6,7 +6,7 @@
 
 # package
 
-* binutils bison flex libiconv libtool make patchutils libgmp-dev libmpfr-dev
+* binutils bison flex libiconv libtool make patchutils libgmp-dev libmpfr-dev gcc-multilib
 
 * more details to install libiconv in ubuntu
 
@@ -17,4 +17,5 @@
 # ./configure --prefix=/usr/local/libiconv
 # make
 # sudo make install
-``` 
+```
+ 
