@@ -2,14 +2,17 @@
 [BITS 16]
 
 SECTION .text
+jmp 0x07C0:START
 
-mov ax, 0xB800
-mov ds, ax
+START:
+	mov ax, 0x07C0
+	mov ds, ax
 
-mov byte [0x00], 'M'
-mov byte [0x01], 0x4A
-mov byte [0x02], 'A'
-mov byte [0x03], 0x5A
+	mov ax, 0xB800
+	mov es, ax
+
+	mov byte [es:0x00], 'M'
+	mov byte [es:0x01], 0x4A
 
 jmp $
 
