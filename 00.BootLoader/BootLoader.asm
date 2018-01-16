@@ -38,12 +38,15 @@ START:
 
 .MESSAGEEND:
 
-	jmp $
+	jmp $	; infinate loop in this line
 
 MESSAGE1:	db 'MINT64 OS Boot Loader Start~!!', 0
 
 
 times 510 - ($ - $$) db 0x00
+;$			: address of this line
+;$$			: start address of this section(.text)
+;time n sth : repeat sth n times
 
 db 0x55
 db 0xAA
